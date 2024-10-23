@@ -137,6 +137,8 @@ vim.api.nvim_create_user_command('DVD', 'DiffviewOpen origin/development...HEAD'
 vim.keymap.set('n', '<C-j>', vim.diagnostic.goto_next, { desc = 'Diagnostics' })
 vim.keymap.set('n', '<C-k>', vim.diagnostic.goto_prev, { desc = 'Diagnostics' })
 
+vim.keymap.set('n', '<leader><Tab>', ':bd<cr>', { desc = 'Delete buffer' })
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
@@ -750,7 +752,7 @@ require('lazy').setup({
         python = { 'isort', 'black' },
         --
         -- You can use 'stop_after_first' to run the first available formatter from the list
-        javascript = { 'prettierd', 'prettier', stop_after_first = true },
+        javascript = { 'prettier', 'prettierd', stop_after_first = true },
       },
     },
   },
